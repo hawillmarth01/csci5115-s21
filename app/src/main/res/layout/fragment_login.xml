@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/greengrocerlogo" />
 
     <TextView
         android:id="@+id/textView"
