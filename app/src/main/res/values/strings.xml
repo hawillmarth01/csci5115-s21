@@ -3,4 +3,20 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="faqs_text">
+        <b>Q:How do I earn points?</b>\n
+        A:By making sustainable purchases.
+        \n\n
+        <b>Q:Why can\’t I buy some of the plants?</b>\n
+        A:You may not have enough points to buy some of the plants.
+        \n\n
+        <b>Q:How is the sustainability rating calculated?</b>\n
+        A:The characteristics factored into a product\'s sustainability rating are its seasonality, water usage, the amount of CO2 emissions, quality, and price. Each characteristic is individually rated and given a letter grade ranging from the highest grade of an A to the lowest grade F. The individual ratings are then averaged to get the sustainability rating, which also follows the A-F grading system.
+        \n\n
+        <b>Q:Question 3 </b>\n
+        A:Answer 3
+        \n\n
+        If you have any other questions, please contact us at XXX-XXX-XXXX or XXX@XXX.XXX
+    </string>
+    <string name="faqs">FAQS</string>
 </resources>
