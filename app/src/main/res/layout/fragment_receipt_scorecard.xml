@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--TextView and Button displayed in First Fragment -->
+    <!--Title Bar-->
+    <TextView
+        android:id="@+id/titleBar"
+        android:layout_width="411dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="0dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#B1EFCC"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/receiptScorecardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receipt Scorecard"
+        android:textAlignment="center"
+        android:textColor="#47525E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rvReceiptScorecard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/titleBar"
+        app:layout_constraintTop_toTopOf="@+id/titleBar"
+        app:layout_constraintVertical_bias="0.489" />
+
+    <!--Receipt Contents-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReceiptScorecard"
+        android:layout_width="412dp"
+        android:layout_height="392dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+    <!--Bottom Bar-->
+    <TextView
+        android:id="@+id/bottomBar"
+        android:layout_width="410dp"
+        android:layout_height="200dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#B1EFCC"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/receiptGradeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Receipt Grade:"
+        android:textColor="#47525E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/bottomBar"
+        app:layout_constraintTop_toTopOf="@+id/bottomBar" />
+    <TextView
+        android:id="@+id/receiptGrade"
+        android:layout_width="49dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#47525E"
+        android:text="Grade"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toEndOf="@+id/receiptGradeTitle"
+        app:layout_constraintTop_toTopOf="@+id/bottomBar" />
+    <Button
+        android:id="@+id/receiptScorecardNext"
+        android:layout_width="228dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#47525E"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/bottomBar"
+        app:layout_constraintTop_toTopOf="@+id/bottomBar"
+        app:layout_constraintVertical_bias="0.383" />
+
+    <!-- Fragment Frame -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="303dp"
+        android:layout_height="313dp"
+        android:layout_marginBottom="208dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
