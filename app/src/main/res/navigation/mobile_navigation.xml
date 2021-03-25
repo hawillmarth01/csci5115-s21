@@ -27,5 +27,5 @@
         android:id="@+id/navigation_pscan"
         android:name="io.moonen.charles.greengrocery.ui.pscan.PScanFragment"
         android:label="@string/title_pscan"
-        tools:layout="@layout/fragment_pscan" />
+        tools:layout="@layout/fragment_productscansearch" />
 </navigation>

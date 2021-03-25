@@ -25,4 +25,10 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="garden_name">Garden Name</string>
+    <string name="update">Update</string>
+    <string name="location_services">Enable Location Services</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions \></string>
 </resources>
