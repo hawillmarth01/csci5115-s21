@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import io.moonen.charles.greengrocery.MainActivity;
 import io.moonen.charles.greengrocery.R;
-import io.moonen.charles.greengrocery.Receipt;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 
 //POINTS EARNED FRAGMENT
 public class PointsEarnedFragment extends Fragment {

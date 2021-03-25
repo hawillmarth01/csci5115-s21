@@ -1,6 +1,8 @@
-package io.moonen.charles.greengrocery;
+package io.moonen.charles.greengrocery.ReceiptContentManagement;
 
 import java.util.List;
+
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Product;
 
 //Class to store receipt info
 public class Receipt {

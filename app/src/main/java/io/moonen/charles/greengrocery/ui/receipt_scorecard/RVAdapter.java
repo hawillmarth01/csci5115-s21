@@ -10,9 +10,9 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import io.moonen.charles.greengrocery.Product;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Product;
 import io.moonen.charles.greengrocery.R;
-import io.moonen.charles.greengrocery.Receipt;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 import io.moonen.charles.greengrocery.ui.product_scorecard.ProductScorecardFragment;
 
 //RecycleView Adapter

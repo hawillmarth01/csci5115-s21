@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import io.moonen.charles.greengrocery.MainActivity;
 import io.moonen.charles.greengrocery.R;
-import io.moonen.charles.greengrocery.Receipt;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 import io.moonen.charles.greengrocery.ui.points_earned.PointsEarnedFragment;
 
 //RECEIPT SCORECARD FRAGMENT

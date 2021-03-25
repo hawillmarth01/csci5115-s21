@@ -5,18 +5,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import java.util.List;
 
-import io.moonen.charles.greengrocery.Grade;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Grade;
 import io.moonen.charles.greengrocery.MainActivity;
-import io.moonen.charles.greengrocery.Product;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Product;
 import io.moonen.charles.greengrocery.R;
-import io.moonen.charles.greengrocery.Receipt;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 
 //PRODUCT SCORECARD FRAGMENT
 public class ProductScorecardFragment extends Fragment {

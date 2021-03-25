@@ -1,4 +1,4 @@
-package io.moonen.charles.greengrocery;
+package io.moonen.charles.greengrocery.ReceiptContentManagement;
 
 //Class to store a grade for a given category
 public class Grade {

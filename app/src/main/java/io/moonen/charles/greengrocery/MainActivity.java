@@ -2,6 +2,7 @@ package io.moonen.charles.greengrocery;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -12,13 +13,14 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.widget.Button;
-import android.widget.Toast;
-
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.moonen.charles.greengrocery.ReceiptContentManagement.CSVFile;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.DataAdapter;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Product;
+import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 import io.moonen.charles.greengrocery.ui.receipt_scorecard.ReceiptScorecardFragment;
 
 public class MainActivity extends AppCompatActivity {

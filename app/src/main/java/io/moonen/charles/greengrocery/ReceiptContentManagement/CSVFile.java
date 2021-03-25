@@ -1,4 +1,4 @@
-package io.moonen.charles.greengrocery;
+package io.moonen.charles.greengrocery.ReceiptContentManagement;
 
 import java.io.BufferedReader;
 import java.io.IOException;
