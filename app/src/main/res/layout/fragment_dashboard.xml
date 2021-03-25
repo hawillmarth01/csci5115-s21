@@ -6,17 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashboard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-193dp"
+        tools:layout_editor_absoluteY="-192dp">
+
+        <Button
+            android:id="@+id/growyourgarden"
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#B1EFCC"
+            android:stateListAnimator="@null"
+            android:text="@string/grow_your_garden"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.797" />
+
+        <ImageView
+            android:id="@+id/mapleView"
+            android:layout_width="112dp"
+            android:layout_height="229dp"
+            android:src="@drawable/maple3"
+            app:layout_constraintBottom_toTopOf="@+id/growyourgarden"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.802"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.695" />
+
+        <ImageView
+            android:id="@+id/bushView"
+            android:layout_width="166dp"
+            android:layout_height="84dp"
+            android:src="@drawable/berrybush3"
+            app:layout_constraintBottom_toTopOf="@+id/growyourgarden"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.579"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888" />
+
+        <ImageView
+            android:id="@+id/evergreenView"
+            android:layout_width="194dp"
+            android:layout_height="324dp"
+            android:src="@drawable/evergreen3"
+            app:layout_constraintBottom_toTopOf="@+id/growyourgarden"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.85" />
+
+        <ImageView
+            android:id="@+id/tulipView"
+            android:layout_width="34dp"
+            android:layout_height="103dp"
+            android:src="@drawable/tulip3"
+            app:layout_constraintBottom_toTopOf="@+id/growyourgarden"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.201"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.927" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
