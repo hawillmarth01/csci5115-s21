@@ -10,31 +10,34 @@
         android:id="@+id/dashboard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-193dp"
-        tools:layout_editor_absoluteY="-192dp">
+        android:background="#B1EFCC"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-133dp">
 
         <Button
             android:id="@+id/growyourgarden"
             android:layout_width="350dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
-            android:backgroundTint="#B1EFCC"
+            android:backgroundTint="#989cac"
             android:stateListAnimator="@null"
             android:text="@string/grow_your_garden"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.797" />
+            app:layout_constraintVertical_bias="0.75" />
 
         <ImageView
             android:id="@+id/mapleView"
             android:layout_width="112dp"
             android:layout_height="229dp"
             android:src="@drawable/maple3"
+            android:tag="@drawable/maple3"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/growyourgarden"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.802"
@@ -47,6 +50,8 @@
             android:layout_width="166dp"
             android:layout_height="84dp"
             android:src="@drawable/berrybush3"
+            android:tag="@drawable/berrybush3"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/growyourgarden"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.579"
@@ -59,6 +64,8 @@
             android:layout_width="194dp"
             android:layout_height="324dp"
             android:src="@drawable/evergreen3"
+            android:tag="@drawable/evergreen3"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/growyourgarden"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.285"
@@ -71,12 +78,33 @@
             android:layout_width="34dp"
             android:layout_height="103dp"
             android:src="@drawable/tulip3"
+            android:tag="@drawable/tulip3"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/growyourgarden"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.201"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.927" />
+
+        <TextView
+            android:id="@+id/noGarden"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#989cac"
+            android:gravity="center"
+            android:text="You currently have no items in the garden."
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.358"
+            app:layout_constraintWidth_percent="0.5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,8 @@
 package io.moonen.charles.greengrocery.ui.gardenessentials;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +20,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     private Context mCtx;
     private List<PlantRow> plantRowList;
     private OnItemClickListener mListener;
+    private SharedPreferences sharedPreferences;
+
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
+
 
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.mListener = listener;
@@ -58,18 +63,21 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if (!button.isClickable()) {
+                        return;
+                    }
                     if (mListener != null) {
                         int position = getAdapterPosition();
                         if (position != RecyclerView.NO_POSITION) {
                             mListener.onItemClick(position);
                         }
-                        if (plantRowList.get(position).fullyGrown()) {
-                            button.setClickable(false);
-                            //button.setBackground();
-                        }
                     }
+
                 }
             });
+
+
+
         }
 
     }
@@ -94,8 +102,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         viewHolder.textViewTitle.setText(plant.getTitle());
         viewHolder.textViewPrice.setText(description);
         viewHolder.button.setText(plant.getType());
+
+        if (plant.fullyGrown()) {
+            viewHolder.button.setClickable(false);
+            viewHolder.button.setBackgroundColor(Color.GRAY);
+            viewHolder.button.setTextColor(Color.WHITE);
+        }
+
         viewHolder.imageView.
-                setImageDrawable(mCtx.getResources().getDrawable(plant.getImage()));
+                setImageDrawable(mCtx.getResources().getDrawable(plant.getIcon()));
     }
 
     // Return the size of your dataset (invoked by the layout manager)
