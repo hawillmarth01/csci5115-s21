@@ -21,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Receipt Contents-->
     <TextView
         android:id="@+id/receiptScorecardTitle"
         android:layout_width="wrap_content"
@@ -30,17 +31,15 @@
         android:textColor="#47525E"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rvReceiptScorecard"
+        app:layout_constraintBottom_toBottomOf="@+id/titleBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/titleBar"
-        app:layout_constraintTop_toTopOf="@+id/titleBar"
-        app:layout_constraintVertical_bias="0.489" />
+        app:layout_constraintTop_toTopOf="@+id/titleBar" />
 
-    <!--Receipt Contents-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvReceiptScorecard"
-        android:layout_width="412dp"
-        android:layout_height="392dp"
+        android:layout_width="394dp"
+        android:layout_height="391dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -109,7 +108,8 @@
         android:layout_marginBottom="208dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
 
