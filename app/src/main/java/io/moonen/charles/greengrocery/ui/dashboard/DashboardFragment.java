@@ -1,11 +1,14 @@
 package io.moonen.charles.greengrocery.ui.dashboard;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +21,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,12 +37,10 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private DashboardViewModel dashboardViewModel;
     private ConstraintLayout constraintLayout;
-    private ArrayList<PlantRow> plants =  new ArrayList<>(Arrays.asList(
-            new PlantRow("Evergreen Tree", 100, R.drawable.evergreen3, "Plant"),
-            new PlantRow("Maple Tree", 50, R.drawable.maple3, "Plant"),
-            new PlantRow("Berry Bush", 20, R.drawable.berrybush3, "Plant"),
-            new PlantRow("Tulip", 10, R.drawable.tulip3, "Plant")
-    ));
+    private List<PlantRow> plants;
+    private boolean emptyGarden = true;
+    private SharedPreferences sharedPreferences;
+    private Gson gson;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -45,8 +48,32 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
                 new ViewModelProvider(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
+        sharedPreferences = getActivity().getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        gson = new Gson();
+        String jsonText = sharedPreferences.getString("plants", null);
+        plants = Arrays.asList(gson.fromJson(jsonText, PlantRow[].class));
+
+        if (emptyGarden) {
+            for (PlantRow plant : plants) {
+                if (plant.isPurchased()) {
+                    emptyGarden = false;
+                    TextView emptyGarden = root.findViewById(R.id.noGarden);
+                    emptyGarden.setVisibility(View.GONE);
+
+                }
+            }
+        }
+
         Button growYourGarden = root.findViewById(R.id.growyourgarden);
         growYourGarden.setOnClickListener(this);
+
+        for (PlantRow plant : plants) {
+            ImageView imageView = root.findViewById(plant.getViewID());
+            if (plant.isPurchased()) {
+                imageView.setVisibility(View.VISIBLE);
+            }
+            imageView.setImageResource(plant.getImage());
+        }
 
         constraintLayout = root.findViewById(R.id.dashboard);
 
@@ -57,12 +84,14 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.growyourgarden:
-                Bundle args = new Bundle();
-                args.putParcelableArrayList("plants", plants);
+
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                String jsonText = gson.toJson(plants);
+                editor.putString("plants", jsonText);
+
+                editor.apply();
 
                 EssentialsFragment essentials = new EssentialsFragment();
-                essentials.setArguments(args);
-
                 FragmentTransaction fragmentTransaction = getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction();

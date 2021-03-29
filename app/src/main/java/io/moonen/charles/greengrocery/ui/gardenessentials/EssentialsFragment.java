@@ -1,5 +1,7 @@
 package io.moonen.charles.greengrocery.ui.gardenessentials;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,11 +16,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,20 +33,23 @@ import io.moonen.charles.greengrocery.R;
 
 public class EssentialsFragment extends Fragment implements View.OnClickListener, PurchaseDialog.PurchaseDialogListener {
 
-    private EssentialsViewModel essentialsViewModel;
-    private ArrayList<PlantRow> plants;
+    private List<PlantRow> plants;
     private CustomAdapter adapter;
     private RecyclerView recyclerView;
+    private SharedPreferences sharedPreferences;
+    private Gson gson;
 
-    private int tempPoints = 100;
+    private int points;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        Bundle mArgs = getArguments();
-        plants = mArgs.getParcelableArrayList("plants");
+        sharedPreferences = getActivity().getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        points = sharedPreferences.getInt("points", 0);
+        gson = new Gson();
+        String jsonText = sharedPreferences.getString("plants", null);
+        plants = Arrays.asList(gson.fromJson(jsonText, PlantRow[].class));
 
-        essentialsViewModel = new ViewModelProvider(this).get(EssentialsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_essentials, container, false);
 
         recyclerView = (RecyclerView) root.findViewById(R.id.essentials);
@@ -51,12 +59,13 @@ public class EssentialsFragment extends Fragment implements View.OnClickListener
         Fragment fragment = this;
 
         adapter = new CustomAdapter(root.getContext(), plants);
+
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new CustomAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
                 String plantName = plants.get(position).getTitle();
-                boolean purchaseable = tempPoints >= plants.get(position).getPrice();
+                boolean purchaseable = points >= plants.get(position).getPrice();
                 boolean water = plants.get(position).isPurchased();
 
                 Bundle args = new Bundle();
@@ -74,11 +83,10 @@ public class EssentialsFragment extends Fragment implements View.OnClickListener
         });
 
         TextView pointsView = root.findViewById(R.id.points);
-        pointsView.setText(String.valueOf(tempPoints));
+        pointsView.setText(String.valueOf(points));
 
         return root;
     }
-
 
     @Override
     public void onClick(View view) {
@@ -89,20 +97,29 @@ public class EssentialsFragment extends Fragment implements View.OnClickListener
 
         PlantRow plant = plants.get(position);
 
-        System.out.println(plant.isPurchased());
-
         if (plant.isPurchased()) {
             plant.waterPlant();
         }
         else {
             plant.purchase();
         }
-        tempPoints -= plant.getPrice();
-        getFragmentManager().beginTransaction().detach(this).attach(this).commit();
+
+        points -= plant.getPrice();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("points", points);
+        String jsonText = gson.toJson(plants);
+        editor.putString("plants", jsonText);
+        editor.apply();
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        fm.beginTransaction().detach(this).attach(this).commit();
 
     }
 
-
+    @Override
+    public void returnToGarden() {
+        //FragmentManager fm = getActivity().getSupportFragmentManager();
+        //fm.popBackStack();
+    }
 
 
 }

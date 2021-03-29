@@ -40,6 +40,7 @@ public class PurchaseDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Return to Garden Essentials", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        listener.returnToGarden();
                     }
                 });
 
@@ -92,5 +93,6 @@ public class PurchaseDialog extends AppCompatDialogFragment {
 
     public interface PurchaseDialogListener {
         void sendPurchase(boolean purchase, int position);
+        void returnToGarden();
     }
 }
