@@ -9,26 +9,28 @@
         android:id="@+id/titleBar"
         android:layout_width="412dp"
         android:layout_height="80dp"
+        android:layout_marginTop="56dp"
         android:background="#FFFFFF"
         android:backgroundTint="#B1EFCC"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/bottomBar"
-        android:layout_width="413dp"
-        android:layout_height="200dp"
+        android:layout_width="428dp"
+        android:layout_height="156dp"
         android:background="#FFFFFF"
         android:backgroundTint="#B1EFCC"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/packageCategory" />
+        app:layout_constraintTop_toBottomOf="@+id/packageCategory"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/productScorecardTitle"
@@ -55,7 +57,7 @@
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:contentDescription="locality icon"
         app:layout_constraintEnd_toStartOf="@+id/localCategory"
         app:layout_constraintHorizontal_bias="0.666"
@@ -68,7 +70,7 @@
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="seasonality icon"
         app:layout_constraintEnd_toStartOf="@+id/seasonCategory"
         app:layout_constraintHorizontal_bias="0.666"
@@ -81,36 +83,36 @@
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="water icon"
         app:layout_constraintEnd_toStartOf="@+id/waterCategory"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emissionIcon"
-        app:srcCompat="@drawable/water_icon"/>
+        app:srcCompat="@drawable/water_icon" />
 
     <ImageView
         android:id="@+id/emissionIcon"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="emission icon"
         app:layout_constraintEnd_toStartOf="@+id/emissionCategory"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seasonIcon"
-        app:srcCompat="@drawable/emission_icon"/>
+        app:srcCompat="@drawable/emission_icon" />
 
     <ImageView
         android:id="@+id/packageIcon"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="packaging icon"
         app:layout_constraintEnd_toStartOf="@+id/packageCategory"
-        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waterIcon"
         app:srcCompat="@drawable/package_icon" />
@@ -119,7 +121,7 @@
         android:id="@+id/localCategory"
         android:layout_width="136dp"
         android:layout_height="46dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="40dp"
         android:text="Locality [length placeholder]"
         android:textColor="#47525E"
@@ -131,7 +133,7 @@
         android:id="@+id/seasonCategory"
         android:layout_width="120dp"
         android:layout_height="31dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="56dp"
         android:text="Seasonality"
         android:textColor="#47525E"
@@ -143,7 +145,7 @@
         android:id="@+id/waterCategory"
         android:layout_width="120dp"
         android:layout_height="31dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="56dp"
         android:text="Water"
         android:textColor="#47525E"
@@ -155,19 +157,19 @@
         android:id="@+id/emissionCategory"
         android:layout_width="120dp"
         android:layout_height="31dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
         android:text="Emissions"
         android:textColor="#47525E"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/emissionGrade"
-        app:layout_constraintTop_toBottomOf="@+id/seasonCategory"/>
+        app:layout_constraintTop_toBottomOf="@+id/seasonCategory" />
 
     <TextView
         android:id="@+id/packageCategory"
         android:layout_width="139dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
         android:text="Packaging [long length placeholder]"
         android:textColor="#47525E"
@@ -179,7 +181,7 @@
         android:id="@+id/localGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -187,6 +189,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleBar" />
 
@@ -194,7 +197,7 @@
         android:id="@+id/seasonGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -202,6 +205,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/localGrade" />
 
@@ -209,7 +213,7 @@
         android:id="@+id/waterGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -217,14 +221,15 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emissionGrade"/>
+        app:layout_constraintTop_toBottomOf="@+id/emissionGrade" />
 
     <TextView
         android:id="@+id/emissionGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -232,14 +237,15 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seasonGrade"/>
+        app:layout_constraintTop_toBottomOf="@+id/seasonGrade" />
 
     <TextView
         android:id="@+id/packageGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -247,6 +253,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waterGrade" />
 
@@ -261,10 +268,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/qualityCategory"
         app:layout_constraintEnd_toStartOf="@+id/priceValue"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sustainCategory"
-        app:layout_constraintVertical_bias="0.363" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/sustainCategory"
@@ -285,14 +292,14 @@
         android:layout_width="73dp"
         android:layout_height="29dp"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="48dp"
         android:text="Quality:"
         android:textColor="#47525E"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
         app:layout_constraintEnd_toStartOf="@+id/qualityValue"
-        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -316,7 +323,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceValue"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <TextView
         android:id="@+id/sustainGrade"
@@ -326,6 +333,7 @@
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
         android:text="G"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="22sp"

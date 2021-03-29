@@ -7,6 +7,7 @@
     android:background="#FFFFFF"
     android:backgroundTint="#EC0000"
     tools:context=".MainActivity">
+    <!-- android:backgroundTint="null" -->
 
     <TextView
         android:id="@+id/textView3"

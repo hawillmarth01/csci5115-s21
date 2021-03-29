@@ -16,12 +16,12 @@ import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 import io.moonen.charles.greengrocery.ui.product_scorecard.ProductScorecardFragment;
 
 //RecycleView Adapter
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder> {
+public class RVAdapter_ReceiptScorecard extends RecyclerView.Adapter<RVAdapter_ReceiptScorecard.ProductViewHolder> {
     private Context mCtx;
     private Receipt receipt;
 
     //getting the context and product list with constructor
-    public RVAdapter(Context mCtx, Receipt receipt) {
+    public RVAdapter_ReceiptScorecard(Context mCtx, Receipt receipt) {
         this.mCtx = mCtx;
         this.receipt = receipt;
     }
@@ -30,7 +30,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder>
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.layout_receipt_products, null);
+        View view = inflater.inflate(R.layout.layout_receipt_scorecard, null);
 
         return new ProductViewHolder(view);
     }
@@ -65,7 +65,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder>
 
             int currentPosition = getAdapterPosition();  //pass in position of clicked product
             ((FragmentActivity) v.getContext()).getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, new ProductScorecardFragment(currentPosition))
+                    .replace(R.id.fragment_container, new ProductScorecardFragment(receipt.getNumber(), currentPosition))
                     .commit();
         }
     }

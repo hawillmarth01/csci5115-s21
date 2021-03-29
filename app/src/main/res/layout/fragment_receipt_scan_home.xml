@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleBar"
+        android:layout_width="426dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#B1EFCC"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/scanReceiptButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Receipt Contents-->
+    <TextView
+        android:id="@+id/receiptScanHomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receipt Scan"
+        android:textAlignment="center"
+        android:textColor="#47525E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/titleBar"
+        app:layout_constraintEnd_toEndOf="@+id/titleBar"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleBar"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/bottomBar"
+        android:layout_width="438dp"
+        android:layout_height="143dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#B1EFCC"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scannedReceiptTitle"
+        android:layout_width="412dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#47525E"
+        android:text="    Scanned Receipt:"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rvReceiptPreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReceiptPreview"
+        android:layout_width="430dp"
+        android:layout_height="259dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addItemButton"
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#47525E"
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:drawableTint="#FFFFFF"
+        android:text="Add Item"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomBar" />
+
+    <Button
+        android:id="@+id/scanReceiptButton"
+        android:layout_width="204dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#47525E"
+        android:text="Scan Receipt"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/scannedReceiptTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/scoreMyReceiptButton"
+        android:layout_width="311dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#47525E"
+        android:text="Score My Receipt"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addItemButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Fragment Frame -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="271dp"
+        android:layout_height="287dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleBar"></FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
