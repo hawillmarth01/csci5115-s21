@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".ui.deleteReceiptDialog.DeleteReceiptDialog">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="364dp"
+            android:layout_height="307dp"
+            android:background="#B1EFCC"
+            android:text="Are you sure you want to delete this item?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/CancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="52dp"
+            android:backgroundTint="#494949"
+            android:onClick="cancel"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.229"
+            app:layout_constraintStart_toEndOf="@+id/ConfirmButton"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/ConfirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginBottom="52dp"
+            android:backgroundTint="#494949"
+            android:onClick="confirm"
+            android:text="Confirm"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

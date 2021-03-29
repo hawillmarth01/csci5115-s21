@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,133 +8,126 @@
     tools:context=".MainActivity">
     <!-- android:backgroundTint="null" -->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="0dp"
-        android:background="#B1EFCC" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Product Scan &amp; Search"
-        android:background="#B1EFCC"
-        android:textColor="#47525E"
-        android:textSize="32sp"
-        android:gravity="center"
-        android:textStyle="bold"  />
-
     <Button
         android:id="@+id/scan_barcode"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="140dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#47525E"
-        android:text="Scan Barcode" />
+        android:text="Scan Barcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
         android:id="@+id/barcodenum_search"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="310dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:background="#DCD8D8"
-        android:queryHint="Search Barcode Number"
         android:iconifiedByDefault="false"
-        android:queryBackground="@android:color/transparent"/>
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="Search Barcode Number"
+        app:layout_constraintEnd_toStartOf="@+id/confirm_barnum_button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <SearchView
         android:id="@+id/product_search"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:background="#DCD8D8"
-        android:queryHint="Search Product Name"
         android:iconifiedByDefault="false"
-        android:queryBackground="@android:color/transparent"/>
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="Search Product Name"
+        app:layout_constraintEnd_toStartOf="@+id/confirm_barnum_button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <SearchView
         android:id="@+id/origin_search"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="515dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="#DCD8D8"
-        android:queryHint="Search Origin"
         android:iconifiedByDefault="false"
-        android:queryBackground="@android:color/transparent"/>
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="Search Origin"
+        app:layout_constraintEnd_toStartOf="@+id/confirm_barnum_button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_search" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="48dp"
         android:text="Search by Barcode Number"
         android:textColor="#47525E"
-        android:textSize="26sp" />
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scan_barcode" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="32dp"
         android:text="Search by Name &amp; Origin"
         android:textColor="#47525E"
-        android:textSize="26sp" />
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcodenum_search" />
 
     <Button
         android:id="@+id/confirm_barnum_button1"
         android:layout_width="82dp"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="310dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#47525E"
         android:text="Confirm"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/barcodenum_search"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
     <Button
         android:id="@+id/confirm_barnum_button2"
         android:layout_width="82dp"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="460dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#47525E"
         android:text="Confirm"
-        android:textSize="10sp"/>
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/product_search"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
     <Button
         android:id="@+id/confirm_barnum_button3"
         android:layout_width="82dp"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="515dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#47525E"
         android:text="Confirm"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/origin_search"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_barnum_button2" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
