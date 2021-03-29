@@ -3,12 +3,9 @@ package io.moonen.charles.greengrocery;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-<<<<<<< HEAD
-=======
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
->>>>>>> 862b062121b849456ed1a8d59fe98ed2043cefee
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
@@ -23,14 +20,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-<<<<<<< HEAD
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import io.moonen.charles.greengrocery.ui.gardenessentials.PlantRow;
-=======
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +35,6 @@ import io.moonen.charles.greengrocery.ReceiptContentManagement.DataAdapter;
 import io.moonen.charles.greengrocery.ReceiptContentManagement.Product;
 import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 import io.moonen.charles.greengrocery.ui.receipt_scorecard.ReceiptScorecardFragment;
->>>>>>> 862b062121b849456ed1a8d59fe98ed2043cefee
 
 public class MainActivity extends AppCompatActivity {
     Receipt receipt;
