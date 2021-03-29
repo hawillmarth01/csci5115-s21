@@ -6,8 +6,10 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
 import android.widget.Button;
-import android.content.Intent;
 import android.view.View;
+
+import io.moonen.charles.greengrocery.ui.faqs.FaqsFragment;
+
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -26,11 +28,15 @@ public class SettingsActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        Button faqsButton = findViewById(R.id.button);
+        Button faqsButton =  findViewById(R.id.button);
         faqsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(v.getContext(), FaqsActivity.class);
-                startActivityForResult(myIntent, 0);
+                FaqsFragment nextFrag = new FaqsFragment();
+                getSupportFragmentManager().beginTransaction().
+                        replace(R.id.settings, nextFrag, "findThisFragment").
+                        addToBackStack(null).
+                        commit();
             }
 
         });
