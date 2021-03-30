@@ -21,6 +21,10 @@ public class PointsEarnedFragment extends Fragment implements View.OnClickListen
     //number of scanned receipt
     private int receipt_num;
 
+    public PointsEarnedFragment(){  //pass in number of scanned receipt
+        this.receipt_num =  1;
+    }
+
     public PointsEarnedFragment(int scanned_receipt_num){  //pass in number of scanned receipt
         this.receipt_num =  scanned_receipt_num;
     }
@@ -30,7 +34,7 @@ public class PointsEarnedFragment extends Fragment implements View.OnClickListen
 
         //grow garden button
         Button growButton = (Button) root.findViewById(R.id.growButton);
-        growButton.setOnClickListener(this);
+//        growButton.setOnClickListener(this);
 
         return root;
     }
@@ -45,6 +49,7 @@ public class PointsEarnedFragment extends Fragment implements View.OnClickListen
 
         //set points value
         TextView pointsEarned = v.findViewById(R.id.pointsEarned);
+        pts = "1000";
         pointsEarned.setText("You Earned " + pts + " points!");
     }
     @Override

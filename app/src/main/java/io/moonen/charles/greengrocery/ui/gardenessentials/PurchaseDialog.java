@@ -9,6 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
+import androidx.navigation.Navigation;
+
+import java.util.Objects;
+
+import io.moonen.charles.greengrocery.MainActivity;
+import io.moonen.charles.greengrocery.R;
 
 public class PurchaseDialog extends AppCompatDialogFragment {
 

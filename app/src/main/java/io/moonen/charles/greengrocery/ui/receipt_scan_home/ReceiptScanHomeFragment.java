@@ -45,7 +45,7 @@ public class ReceiptScanHomeFragment extends Fragment implements View.OnClickLis
 
         //score my receipt button
         Button scoreMyReceiptButton = (Button) root.findViewById(R.id.scoreMyReceiptButton);
-        scoreMyReceiptButton.setOnClickListener(this);
+//        scoreMyReceiptButton.setOnClickListener(this);
 
         return root;
     }

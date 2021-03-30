@@ -92,6 +92,7 @@
             android:layout_height="55dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="#47525E"
+            android:onClick="nav_rscore"
             android:text="Score My Receipt"
             android:textColor="#FFFFFF"
             android:textSize="18sp"

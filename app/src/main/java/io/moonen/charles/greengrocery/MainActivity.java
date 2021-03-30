@@ -140,6 +140,18 @@ public class MainActivity extends AppCompatActivity {
         rootController.navigate(R.id.navigation_faq);
     }
 
+    public void nav_rscore(View view) {
+        rootController.navigate(R.id.navigation_rscore);
+    }
+
+    public void nav_garden(View view) {
+        rootController.navigate(R.id.navigation_garden);
+    }
+
+    public void nav_points_earned(View view) {
+        rootController.navigate(R.id.navigation_points_earned);
+    }
+
     //returns list of receipts
     public List<Receipt> getReceiptList(){ return receipts; }
 }

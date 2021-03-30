@@ -25,6 +25,8 @@ public class ReceiptScorecardFragment extends Fragment implements View.OnClickLi
     //number of scanned receipt
     private int receipt_num;
 
+    public ReceiptScorecardFragment() {receipt_num = 1;}
+
     public ReceiptScorecardFragment(int scanned_receipt_num){  //pass in number of scanned receipt
         this.receipt_num =  scanned_receipt_num;
     }
@@ -35,7 +37,7 @@ public class ReceiptScorecardFragment extends Fragment implements View.OnClickLi
 
         //next button
         Button nextButton = (Button) root.findViewById(R.id.receiptScorecardNext);
-        nextButton.setOnClickListener(this);
+//        nextButton.setOnClickListener(this);
 
         return root;
     }
