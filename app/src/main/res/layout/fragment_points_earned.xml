@@ -9,7 +9,7 @@
         android:id="@+id/topBar"
         android:layout_width="411dp"
         android:layout_height="80dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="56dp"
         android:background="#FFFFFF"
         android:backgroundTint="#B1EFCC"
         android:text=""
@@ -20,8 +20,8 @@
 
     <TextView
         android:id="@+id/pointsEarned"
-        android:layout_width="286dp"
-        android:layout_height="127dp"
+        android:layout_width="301dp"
+        android:layout_height="129dp"
         android:background="#FFFFFF"
         android:backgroundTint="#B1EFCC"
         android:text="You Earned X Points!"
@@ -31,26 +31,27 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bottomBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        app:layout_constraintVertical_bias="0.438" />
 
     <TextView
         android:id="@+id/bottomBar"
-        android:layout_width="413dp"
-        android:layout_height="200dp"
+        android:layout_width="412dp"
+        android:layout_height="165dp"
         android:background="#FFFFFF"
         android:backgroundTint="#B1EFCC"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/growButton"
-        android:layout_width="225dp"
-        android:layout_height="53dp"
+        android:layout_width="241dp"
+        android:layout_height="62dp"
         android:backgroundTint="#47525E"
         android:text="Grow Your Garden"
         android:textAllCaps="false"
@@ -60,6 +61,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottomBar"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintVertical_bias="0.366" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

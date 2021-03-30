@@ -20,13 +20,15 @@ import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 //PRODUCT SCORECARD FRAGMENT
 public class ProductScorecardFragment extends Fragment {
     private int productPosition=1; //position of product that was clicked on
-
+    //number of scanned receipt
+    private int receipt_num;
     public ProductScorecardFragment() {
         productPosition = 1;
     }
 
-    public ProductScorecardFragment(int currPosition){  //pass in position of clicked product
-        productPosition = currPosition;
+    public ProductScorecardFragment(int scanned_receipt_num, int currPosition){  //pass in position of clicked product
+        this.receipt_num = scanned_receipt_num;
+        this.productPosition = currPosition;
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -41,7 +43,7 @@ public class ProductScorecardFragment extends Fragment {
 
         //get receipt data
         MainActivity activity = (MainActivity) getActivity();
-        Receipt receipt = activity.getReceiptData();
+        Receipt receipt = activity.getReceiptData(receipt_num);
         List<Product> productList = receipt.getProducts();
 
         //test
@@ -106,4 +108,3 @@ public class ProductScorecardFragment extends Fragment {
         qualityView.setText(productList.get(productPosition).getQuality());
     }
 }
-

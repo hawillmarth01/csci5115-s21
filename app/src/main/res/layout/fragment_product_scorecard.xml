@@ -14,7 +14,7 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/packageCategory"
         app:layout_constraintVertical_bias="1.0" />
@@ -135,6 +135,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -150,6 +151,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/localGrade" />
 
@@ -165,6 +167,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emissionGrade" />
 
@@ -180,6 +183,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seasonGrade" />
 
@@ -195,6 +199,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waterGrade" />
 
@@ -234,7 +239,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/qualityCategory"
         app:layout_constraintEnd_toStartOf="@+id/priceValue"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sustainCategory"
         app:layout_constraintVertical_bias="0.571" />
@@ -258,7 +263,7 @@
         android:layout_width="73dp"
         android:layout_height="29dp"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="48dp"
         android:text="Quality:"
         android:textColor="#47525E"
         android:textSize="20sp"
@@ -291,7 +296,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceValue"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <TextView
         android:id="@+id/sustainGrade"
@@ -301,6 +306,7 @@
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
         android:text="G"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="22sp"

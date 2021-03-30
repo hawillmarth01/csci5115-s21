@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".MainActivity">
+    <!-- android:backgroundTint="null" -->
 
     <TextView
         android:layout_width="match_parent"

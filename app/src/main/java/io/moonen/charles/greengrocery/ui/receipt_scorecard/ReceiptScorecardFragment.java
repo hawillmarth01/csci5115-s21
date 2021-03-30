@@ -20,9 +20,14 @@ import io.moonen.charles.greengrocery.ui.points_earned.PointsEarnedFragment;
 
 //RECEIPT SCORECARD FRAGMENT
 public class ReceiptScorecardFragment extends Fragment implements View.OnClickListener {
-
     //recyclerview for receipt scorecard
     RecyclerView rvReceiptScorecard;
+    //number of scanned receipt
+    private int receipt_num;
+
+    public ReceiptScorecardFragment(int scanned_receipt_num){  //pass in number of scanned receipt
+        this.receipt_num =  scanned_receipt_num;
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                                  ViewGroup container, Bundle savedInstanceState) {
@@ -44,10 +49,10 @@ public class ReceiptScorecardFragment extends Fragment implements View.OnClickLi
 
         //get receipt data
         MainActivity activity = (MainActivity) getActivity();
-        Receipt receipt = activity.getReceiptData();
+        Receipt receipt = activity.getReceiptData(receipt_num);
 
         //creating recyclerview adapter for receipt
-        RVAdapter adapter = new RVAdapter(getActivity(), receipt);
+        RVAdapter_ReceiptScorecard adapter = new RVAdapter_ReceiptScorecard(getActivity(), receipt);
         //setting adapter to recyclerview
         rvReceiptScorecard.setAdapter(adapter);
 
@@ -60,7 +65,7 @@ public class ReceiptScorecardFragment extends Fragment implements View.OnClickLi
     public void onClick(View v){
         Fragment fragment = null;
         if(v.getId()==R.id.receiptScorecardNext){
-            fragment = new PointsEarnedFragment();
+            fragment = new PointsEarnedFragment(receipt_num);
             replaceFrag(fragment);
         }
     }

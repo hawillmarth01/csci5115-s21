@@ -8,16 +8,28 @@ import io.moonen.charles.greengrocery.ReceiptContentManagement.Product;
 public class Receipt {
 
     //receipt attributes
+    private int number;  //receipt number
     private List<Product> receiptProducts;  //list of products on receipt
 
     //getting the context and product list with constructor
-    public Receipt(List<Product> receiptProducts) {
+    public Receipt(int number, List<Product> receiptProducts) {
+        this.number = number;
         this.receiptProducts = receiptProducts;
     }
+    //get receipt number
+    public int getNumber() { return number; }
 
     //gets product list
     public List<Product> getProducts() { return receiptProducts; }
 
+    //add product to product list
+    public void addItem(Product product_to_add){
+        receiptProducts.add(product_to_add);
+    }
+    //remove item from product list
+    public void removeItem(int product_position){  //pass in position of product in list
+        receiptProducts.remove(product_position);
+    }
     //gets overall receipt grade
     public String getOverallGrade() {
         int numProducts = receiptProducts.size();
