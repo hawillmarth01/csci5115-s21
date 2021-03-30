@@ -25,6 +25,8 @@ public class ReceiptScanHomeFragment extends Fragment implements View.OnClickLis
     RecyclerView rvReceiptPreview;
     private int receipt_num;  //number of receipt that was scanned
 
+    public ReceiptScanHomeFragment() {receipt_num = 1;}
+
     public ReceiptScanHomeFragment(int scanned_receipt_num){  //pass in number of scanned receipt
         receipt_num = scanned_receipt_num;
     }

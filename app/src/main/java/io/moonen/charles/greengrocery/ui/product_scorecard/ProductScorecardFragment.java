@@ -24,6 +24,7 @@ public class ProductScorecardFragment extends Fragment {
     private int receipt_num;
     public ProductScorecardFragment() {
         productPosition = 1;
+        receipt_num = 1;
     }
 
     public ProductScorecardFragment(int scanned_receipt_num, int currPosition){  //pass in position of clicked product

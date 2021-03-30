@@ -129,19 +129,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nav_product_scorecard(View view) {
-//        ((FragmentActivity) view.getContext()).getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.nav_host_fragment, new ProductScorecardFragment(1))
-//                .commit();
         rootController.navigate(R.id.navigation_product_scorecard);
     }
 
     public void nav_product_productsearch(View view) {
-
-//        ((FragmentActivity) view.getContext()).getSupportFragmentManager().beginTransaction()
-//        .replace(R.id.nav_host_fragment, new ProductFragment())
-//        .commit();
         rootController.navigate(R.id.navigation_product_productsearch);
     }
+
+    public void nav_faq(View view) {
+        rootController.navigate(R.id.navigation_faq);
+    }
+
     //returns list of receipts
     public List<Receipt> getReceiptList(){ return receipts; }
 }

@@ -13,15 +13,15 @@
 
     <fragment
         android:id="@+id/navigation_garden"
-        android:name="io.moonen.charles.greengrocery.ui.home.HomeFragment"
+        android:name="io.moonen.charles.greengrocery.ui.dashboard.DashboardFragment"
         android:label="@string/title_garden"
-        tools:layout="@layout/fragment_essentials" />
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_rscan"
-        android:name="io.moonen.charles.greengrocery.ui.rscan.RScanFragment"
+        android:name="io.moonen.charles.greengrocery.ui.receipt_scan_home.ReceiptScanHomeFragment"
         android:label="@string/title_rscan"
-        tools:layout="@layout/fragment_rscan" />
+        tools:layout="@layout/fragment_receipt_scan_home" />
 
     <fragment
         android:id="@+id/navigation_pscan"
@@ -40,4 +40,10 @@
         android:name="io.moonen.charles.greengrocery.ui.product.ProductFragment"
         android:label="@string/title_pscan"
         tools:layout="@layout/fragment_product_productsearch" />
+
+    <fragment
+        android:id="@+id/navigation_faq"
+        android:name="io.moonen.charles.greengrocery.ui.faqs.FaqsFragment"
+        android:label="@string/title_activity_settings"
+        tools:layout="@layout/fragment_faqs" />
 </navigation>
