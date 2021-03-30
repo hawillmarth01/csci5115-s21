@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_garden">
+    app:startDestination="@+id/navigation_pscan">
 
     <fragment
         android:id="@+id/navigation_settings"
@@ -15,7 +15,7 @@
         android:id="@+id/navigation_garden"
         android:name="io.moonen.charles.greengrocery.ui.home.HomeFragment"
         android:label="@string/title_garden"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_essentials" />
 
     <fragment
         android:id="@+id/navigation_rscan"
@@ -27,5 +27,17 @@
         android:id="@+id/navigation_pscan"
         android:name="io.moonen.charles.greengrocery.ui.pscan.PScanFragment"
         android:label="@string/title_pscan"
-        tools:layout="@layout/fragment_pscan" />
+        tools:layout="@layout/fragment_productscansearch" />
+
+    <fragment
+        android:id="@+id/navigation_product_scorecard"
+        android:name="io.moonen.charles.greengrocery.ui.product_scorecard.ProductScorecardFragment"
+        android:label="@string/title_pscan"
+        tools:layout="@layout/fragment_product_scorecard" />
+
+    <fragment
+        android:id="@+id/navigation_product_productsearch"
+        android:name="io.moonen.charles.greengrocery.ui.product.ProductFragment"
+        android:label="@string/title_pscan"
+        tools:layout="@layout/fragment_product_productsearch" />
 </navigation>

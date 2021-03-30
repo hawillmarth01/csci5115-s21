@@ -1,4 +1,12 @@
 <resources>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="grow_your_garden">Grow Your Garden</string>
+    <string name="garden_essentials">Garden Essentials</string>
+    <string name="title_activity_receipt_score_card">Receipt Scorecard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_name">Green Grocer</string>
     <string name="title_garden">Garden</string>
     <string name="title_rscan">Scan Receipt</string>
@@ -25,7 +33,6 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-
     <string name="faqs">FAQS</string>
     <string name="faqs_text">
         <b>Q:How do I earn points?</b>\n
@@ -42,4 +49,10 @@
         \n\n
         If you have any other questions, please contact us at XXX-XXX-XXXX or XXX@XXX.XXX
     </string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="garden_name">Garden Name</string>
+    <string name="update">Update</string>
+    <string name="location_services">Enable Location Services</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions \></string>
 </resources>

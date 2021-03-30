@@ -1,3 +1,4 @@
+/*
 package io.moonen.charles.greengrocery;
 
 import android.os.Bundle;
@@ -49,3 +50,4 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 }
+*/
