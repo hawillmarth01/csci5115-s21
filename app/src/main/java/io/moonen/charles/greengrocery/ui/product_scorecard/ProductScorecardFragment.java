@@ -19,7 +19,11 @@ import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
 
 //PRODUCT SCORECARD FRAGMENT
 public class ProductScorecardFragment extends Fragment {
-    private int productPosition; //position of product that was clicked on
+    private int productPosition=1; //position of product that was clicked on
+
+    public ProductScorecardFragment() {
+        productPosition = 1;
+    }
 
     public ProductScorecardFragment(int currPosition){  //pass in position of clicked product
         productPosition = currPosition;

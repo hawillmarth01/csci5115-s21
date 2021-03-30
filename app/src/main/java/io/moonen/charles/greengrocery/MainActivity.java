@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -24,10 +25,13 @@ import io.moonen.charles.greengrocery.ReceiptContentManagement.CSVFile;
 import io.moonen.charles.greengrocery.ReceiptContentManagement.DataAdapter;
 import io.moonen.charles.greengrocery.ReceiptContentManagement.Product;
 import io.moonen.charles.greengrocery.ReceiptContentManagement.Receipt;
+import io.moonen.charles.greengrocery.ui.product.ProductFragment;
+import io.moonen.charles.greengrocery.ui.product_scorecard.ProductScorecardFragment;
 import io.moonen.charles.greengrocery.ui.receipt_scorecard.ReceiptScorecardFragment;
 
 public class MainActivity extends AppCompatActivity {
     Receipt receipt;
+    NavController rootController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        rootController = navController;
         NavigationUI.setupActionBarWithNavController(this, navController);
         NavigationUI.setupWithNavController(navView, navController);
         //get example receipt data from csv file
@@ -83,5 +88,20 @@ public class MainActivity extends AppCompatActivity {
     //returns example receipt
     public Receipt getReceiptData(){
         return receipt;
+    }
+
+    public void nav_product_scorecard(View view) {
+//        ((FragmentActivity) view.getContext()).getSupportFragmentManager().beginTransaction()
+//                .replace(R.id.nav_host_fragment, new ProductScorecardFragment(1))
+//                .commit();
+        rootController.navigate(R.id.navigation_product_scorecard);
+    }
+
+    public void nav_product_productsearch(View view) {
+
+//        ((FragmentActivity) view.getContext()).getSupportFragmentManager().beginTransaction()
+//        .replace(R.id.nav_host_fragment, new ProductFragment())
+//        .commit();
+        rootController.navigate(R.id.navigation_product_productsearch);
     }
 }

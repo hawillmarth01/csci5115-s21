@@ -6,21 +6,9 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titleBar"
-        android:layout_width="412dp"
-        android:layout_height="80dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#B1EFCC"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/bottomBar"
         android:layout_width="413dp"
-        android:layout_height="200dp"
+        android:layout_height="128dp"
         android:background="#FFFFFF"
         android:backgroundTint="#B1EFCC"
         android:text=""
@@ -28,50 +16,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/packageCategory" />
-
-    <TextView
-        android:id="@+id/productScorecardTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Product Scorecard"
-        android:textAlignment="center"
-        android:textColor="#47525E"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/titleBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/titleBar"
-        app:layout_constraintTop_toTopOf="@+id/titleBar"
-        app:layout_constraintVertical_bias="0.553" />
+        app:layout_constraintTop_toBottomOf="@+id/packageCategory"
+        app:layout_constraintVertical_bias="1.0" />
 
     <!--ICONS-->
 
     <!--CATEGORIES-->
 
-    <ImageView
-        android:id="@+id/localIcon"
-        android:layout_width="54dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="locality icon"
-        app:layout_constraintEnd_toStartOf="@+id/localCategory"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleBar"
-        app:srcCompat="@drawable/local_icon" />
+    <TextView
+        android:id="@+id/localCategory"
+        android:layout_width="136dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="40dp"
+        android:text="Locality [length placeholder]"
+        android:textColor="#47525E"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/localGrade"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/seasonIcon"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="seasonality icon"
         app:layout_constraintEnd_toStartOf="@+id/seasonCategory"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/localIcon"
         app:srcCompat="@drawable/season_icon" />
@@ -81,69 +53,45 @@
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="water icon"
         app:layout_constraintEnd_toStartOf="@+id/waterCategory"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emissionIcon"
-        app:srcCompat="@drawable/water_icon"/>
+        app:srcCompat="@drawable/water_icon" />
 
     <ImageView
         android:id="@+id/emissionIcon"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="emission icon"
         app:layout_constraintEnd_toStartOf="@+id/emissionCategory"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seasonIcon"
-        app:srcCompat="@drawable/emission_icon"/>
+        app:srcCompat="@drawable/emission_icon" />
 
     <ImageView
         android:id="@+id/packageIcon"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="packaging icon"
         app:layout_constraintEnd_toStartOf="@+id/packageCategory"
-        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waterIcon"
         app:srcCompat="@drawable/package_icon" />
 
     <TextView
-        android:id="@+id/localCategory"
-        android:layout_width="136dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="40dp"
-        android:text="Locality [length placeholder]"
-        android:textColor="#47525E"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/localGrade"
-        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
-
-    <TextView
-        android:id="@+id/seasonCategory"
-        android:layout_width="120dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="56dp"
-        android:text="Seasonality"
-        android:textColor="#47525E"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/seasonGrade"
-        app:layout_constraintTop_toBottomOf="@+id/localCategory" />
-
-    <TextView
         android:id="@+id/waterCategory"
         android:layout_width="120dp"
         android:layout_height="31dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="56dp"
         android:text="Water"
         android:textColor="#47525E"
@@ -155,19 +103,19 @@
         android:id="@+id/emissionCategory"
         android:layout_width="120dp"
         android:layout_height="31dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="56dp"
         android:text="Emissions"
         android:textColor="#47525E"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/emissionGrade"
-        app:layout_constraintTop_toBottomOf="@+id/seasonCategory"/>
+        app:layout_constraintTop_toBottomOf="@+id/seasonCategory" />
 
     <TextView
         android:id="@+id/packageCategory"
         android:layout_width="139dp"
         android:layout_height="86dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:text="Packaging [long length placeholder]"
         android:textColor="#47525E"
@@ -179,7 +127,7 @@
         android:id="@+id/localGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -188,13 +136,13 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/seasonGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -209,7 +157,7 @@
         android:id="@+id/waterGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -218,14 +166,14 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emissionGrade"/>
+        app:layout_constraintTop_toBottomOf="@+id/emissionGrade" />
 
     <TextView
         android:id="@+id/emissionGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="68dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
         android:text="G"
@@ -233,13 +181,13 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seasonGrade"/>
+        app:layout_constraintTop_toBottomOf="@+id/seasonGrade" />
 
     <TextView
         android:id="@+id/packageGrade"
         android:layout_width="47dp"
         android:layout_height="31dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="72dp"
         android:background="#FFFFFF"
         android:backgroundTint="#47525E"
@@ -249,6 +197,31 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waterGrade" />
+
+    <TextView
+        android:id="@+id/seasonCategory"
+        android:layout_width="120dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="56dp"
+        android:text="Seasonality"
+        android:textColor="#47525E"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/seasonGrade"
+        app:layout_constraintTop_toBottomOf="@+id/localCategory" />
+
+    <ImageView
+        android:id="@+id/localIcon"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="locality icon"
+        app:layout_constraintEnd_toStartOf="@+id/localCategory"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/local_icon" />
 
     <TextView
         android:id="@+id/priceCategory"
@@ -264,7 +237,7 @@
         app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sustainCategory"
-        app:layout_constraintVertical_bias="0.363" />
+        app:layout_constraintVertical_bias="0.571" />
 
     <TextView
         android:id="@+id/sustainCategory"
@@ -292,8 +265,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
         app:layout_constraintEnd_toStartOf="@+id/qualityValue"
-        app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceValue"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/priceValue"
