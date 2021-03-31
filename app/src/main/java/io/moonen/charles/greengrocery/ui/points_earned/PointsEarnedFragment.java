@@ -49,7 +49,7 @@ public class PointsEarnedFragment extends Fragment implements View.OnClickListen
 
         //set points value
         TextView pointsEarned = v.findViewById(R.id.pointsEarned);
-        pts = "1000";
+        //pts = "1000";
         pointsEarned.setText("You Earned " + pts + " points!");
     }
     @Override
