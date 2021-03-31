@@ -35,7 +35,7 @@ public class ProductScorecardFragment extends Fragment {
         this.receipt_num = scanned_receipt_num;
         this.productPosition = currPosition;
     }
-
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_product_scorecard, container, false);

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,7 +33,7 @@ public class RVAdapter_ReceiptScorecard extends RecyclerView.Adapter<RVAdapter_R
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.layout_receipt_scorecard, null);
+        View view = inflater.inflate(R.layout.layout_receipt_scorecard, parent, false);
 
         return new ProductViewHolder(view);
     }
@@ -78,7 +79,7 @@ public class RVAdapter_ReceiptScorecard extends RecyclerView.Adapter<RVAdapter_R
         public void replaceFrag(Fragment frag){
             FragmentTransaction transaction = mCtx.getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, frag);
-            //transaction.addToBackStack(null);
+            transaction.addToBackStack(null);
             transaction.commit();
         }
     }

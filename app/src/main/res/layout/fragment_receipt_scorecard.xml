@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-15dp">
+
         <TextView
             android:id="@+id/titleBar"
             android:layout_width="0dp"
@@ -98,10 +99,11 @@
             android:layout_height="47dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="#47525E"
-            android:onClick="nav_points_earned"
             android:text="Next"
+            android:onClick="nav_points_earned"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
+            app:elevation="-5dp"
             app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.558"

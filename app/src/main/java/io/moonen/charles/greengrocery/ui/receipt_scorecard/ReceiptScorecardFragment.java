@@ -76,7 +76,7 @@ public class ReceiptScorecardFragment extends Fragment implements View.OnClickLi
     public void replaceFrag(Fragment frag){
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, frag);
-        //transaction.addToBackStack(null);
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 }
